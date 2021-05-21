@@ -22,6 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 -->
 
+<?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form"
 	xmlns:p="/lib/hudson/scriptler">
 
@@ -96,7 +97,7 @@ THE SOFTWARE.
 				</table>
 
 				<textarea id="script" name="script" class="script" script-readOnly="${readOnly}">
-					<j:out value="${script.script}" />
+					${script.script}
 				</textarea>
 				<div align="right">
 					<f:submit value="${%Run}" />

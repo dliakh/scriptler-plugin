@@ -24,6 +24,7 @@ THE SOFTWARE.
 
 
 
+<?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define"
 	xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
 	
@@ -72,7 +73,7 @@ THE SOFTWARE.
 	                </f:block>					
 					<f:entry title="${%Script}">
 						<textarea id="script" name="script" class="script">
-							<j:out value="${script.script}" />
+							${script.script}
 						</textarea>
 					</f:entry>
 				</j:jelly>
